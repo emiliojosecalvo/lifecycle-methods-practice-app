@@ -5,7 +5,6 @@ import './GitApi.css'
 class GitApi extends Component {
     constructor(props) {
         super(props);
-
         this.state = { avatar: '', name: '', bio: '', url: '' }
     }
     async componentDidMount() {

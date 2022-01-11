@@ -6,9 +6,11 @@ class ZenQuotes extends Component {
     constructor(props) {
         super(props);
         this.state = { quote: '', isLoaded: false }
+        console.log('Hi From constructor')
     }
     //runs after the render
     componentDidMount() {
+        console.log('Hi From componentDidMount')
         //load data
         axios.get('https://api.github.com/zen').then(response => (
             // console.log(response)
@@ -20,7 +22,12 @@ class ZenQuotes extends Component {
             )
         ))
     }
+
+    componentDidUpdate() {
+        console.log('Hi From componentDidUpdate')
+    }
     render() {
+        console.log('Hi From render')
         return (
             <div className='ZenQuotes'>
                 {this.state.isLoaded ? (

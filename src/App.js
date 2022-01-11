@@ -1,10 +1,12 @@
 import './App.css';
 import GitApi from './GitApi';
+import ZenQuotes from './ZenQuotes'
 
 function App() {
   return (
     <div className="App">
-      <GitApi username="emiliojosecalvo" />
+      <ZenQuotes />
+      {/* <GitApi username="emiliojosecalvo" /> */}
     </div>
   );
 }
